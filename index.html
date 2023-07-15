@@ -1,9 +1,129 @@
+<!-- Una página web con toda la información. 
+     Y un formulario de contacto enotra pagina.
+    Nombre UntrefSchool 
+    Paleta de colores: #FC7300 , #1F8A70 , #00425A , #181823, 
+#EFF5F5
+- Una barra de navegación que me redirija a cada sección del HTML y al formulario 
+unsplash.com para obtener imágenes 
+de la temática propuesta.
+no agregues imágenes .PNG. Utiliza formatos como JPG o WEBP, que son livianos.
+
+- Las secciones obligatorias son:
+● Quienes somos
+● ¿Por qué elegirnos?
+● Propuesta educativa
+● Últimas noticias.
+
+En el pie de página, quiere que aparezcan las redes sociales del lado izquierdo, el nombre del 
+instituto centrado y contactos del lado derecho.
+
+El sitio debe adaptarse a una vista de tablet (768px) y una vista mobile (320px). (Recuerda que 
+puedes mostrar u ocultar información, dependiendo cada pantalla).
+Debe incorporar SEO
+(title meta “description y author”, header, main, footer, nav)
+En cuanto a la página de formulario, no dejó muchas especificaciones el cliente sobre el diseño, 
+simplemente quiere que sea funcional. Como recomendación: no hagas un formulario 
+sobrecargado de campos. Sé conciso e integra los campos más importantes en éste  formsubmit.co
+(agregar campos ocultos, validar el Email de registro, 
+etc.
+
+Por último, el proyecto debe ser presentado en un repositorio en GITHUB, con el nombre PROYECTOINTEGRADOR-WEB-UNTREFSCHOOL.
+Y generado su respectivo GitHub-Pages.
+
+Utiliza flaticon.com para buscar un favicon y agregarlo a los archivos del proyecto. No utilices archivos con 
+extensión .ico para un favicon. Elige archivos .png para los favicon dado que poseen soporte para 
+transparencias, ideal para las pestañas de los navegadores web.
+
+
+    -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=git statusgit status, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bienvenido al Instituto de Educación Primaria XYZ. Somos una institución dedicada a brindar una educación de calidad a estudiantes de primaria. Nuestro enfoque se centra en el desarrollo integral de cada niño, fomentando su curiosidad, creatividad y habilidades sociales. Descubre cómo nuestro equipo de docentes altamente capacitados y nuestras instalaciones modernas crean un entorno propicio para el aprendizaje. ¡Visítanos y conoce todo lo que podemos ofrecer para el crecimiento y desarrollo de tu hijo!"
+    />
+    <meta name="author" content="Sebastián Ortiz" />
+    <title>UntrefSchool</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="#quienes-somos" class="nav__link">Quienes somos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#por-que-elegirnos" class="nav__link"
+              >¿Por qué elegirnos?</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="#propuesta-educativa" class="nav__link"
+              >Propuesta educativa</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="#ultimas-noticias" class="nav__link">Últimas noticias</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main__container">
+        <img src="img/primaria_1.jpg" alt="imagen_niña_estudiando" />
+        <h1 class="main__title">Untref School</h1>
+        <h2>Instituto de educación primaria</h2>
+      </div>
+      <section id="quienes-somos" class="main__section_quienes-somos">
+        <h3 class="main__section_quienes-somos_h3">Quienes somos</h3>
+        <div class="main__section_quienes-somos">
+          <img src="img/primaria_2.jpg" alt="Imagen_alumnos_en_clase" />
+          <p class="main__section_quienes-somos_p">
+            Nuestro Instituto de Educación Primaria Untref School es una
+            institución comprometida con brindar una educación de calidad a
+            nuestros estudiantes. Con una larga trayectoria en el campo
+            educativo, nos enorgullece ofrecer un ambiente de aprendizaje
+            estimulante y seguro para los niños en sus años formativos.
+          </p>
+        </div>
+      </section>
+      <section id="por-que-elegirnos" class="main__section">
+        <h3 class="main__section_quienes-somos_h3">¿Por qué elegirnos?</h3>
+        <div class="main__section_quienes-somos">
+          <img src="img/primaria_3.jpg" alt="Imagen_alumnos_en_clase" />
+          <p class="main__section_quienes-somos_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure saepe
+            magnam aperiam esse porro facilis amet praesentium, illum molestiae
+            iste voluptate? Nisi porro dolorum, officiis pariatur temporibus
+            dolore dolores eum.
+          </p>
+        </div>
+      </section>
+      <section id="propuesta-educativa" class="main__section">
+        <h3 class="main__section_quienes-somos_h3">Propuesta educativa</h3>
+        <div class="main__section_quienes-somos">
+          <img src="img/primaria_4.jpg" alt="Imagen_alumnos_en_clase" />
+          <p class="main__section_quienes-somos_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsum
+            tempora. Perspiciatis earum velit quisquam ea distinctio
+            repellendus, ab, maxime cumque totam accusantium dicta tempore quod
+            dolor nemo consequatur et?
+          </p>
+        </div>
+      </section>
+      <section id="ultimas-noticias" class="main__section">
+        Últimas noticias.
+        <article class="section__article"></article>
+      </section>
+    </main>
+    <aside class="aside">
+      relleno con barras laterales para páginas de 720
+    </aside>
+    <footer class="footer"></footer>
+  </body>
 </html>
