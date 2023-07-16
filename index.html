@@ -49,6 +49,7 @@ transparencias, ideal para las pestañas de los navegadores web.
     <meta name="author" content="Sebastián Ortiz" />
     <title>UntrefSchool</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   </head>
   <body>
     <header class="header">
@@ -75,15 +76,23 @@ transparencias, ideal para las pestañas de los navegadores web.
     </header>
     <main class="main">
       <div class="container">
-        <img class="main__img" src="img/primaria_1.jpg" alt="imagen_niña_estudiando" />
+        <img
+          class="main__img"
+          src="img/primaria_1.jpg"
+          alt="imagen_niña_estudiando"
+        />
         <div class="overlay"></div>
       </div>
-        <h1 class="main__title">Untref School</h1>
-        <h2>Instituto de educación primaria</h2>
+      <h1 class="main__title">Untref School</h1>
+      <h2>Instituto de educación primaria</h2>
       <section id="quienes-somos" class="main__section_quienes-somos">
         <h3 class="main__section_quienes-somos_h3">Quienes somos</h3>
-        <div class="main__section_quienes-somos">
-          <img src="img/primaria_2.jpg" alt="Imagen_alumnos_en_clase" />
+        <div class="main__section_quienes-somos_container">
+          <img
+            class="quienes-somos_image"
+            src="img/primaria_2.jpg"
+            alt="Imagen_alumnos_en_clase"
+          />
           <p class="main__section_quienes-somos_p">
             Nuestro Instituto de Educación Primaria Untref School es una
             institución comprometida con brindar una educación de calidad a
@@ -95,36 +104,153 @@ transparencias, ideal para las pestañas de los navegadores web.
       </section>
       <section id="por-que-elegirnos" class="main__section_por-que-elegirnos">
         <h3 class="main__section_por-que-elegirnos_h3">¿Por qué elegirnos?</h3>
-        <div class="main__por-que-elegirnos">
+        <div class="por-que-elegirnos_container">
           <p class="main__por-que-elegirnos_p">
-            En nuestro instituto de educación primaria, nos dedicamos apasionadamente en proporcionar una educación de calidad a nuestros estudiantes. Valoramos el crecimiento integral de cada niño, brindándoles un ambiente seguro y estimulante para su desarrollo académico y personal.
+            En nuestro instituto de educación primaria, nos dedicamos
+            apasionadamente en proporcionar una educación de calidad a nuestros
+            estudiantes. Valoramos el crecimiento integral de cada niño,
+            brindándoles un ambiente seguro y estimulante para su desarrollo
+            académico y personal.
           </p>
-          <img src="img/primaria_3.jpg" alt="Imagen_alumnos_en_clase" />
+          <img
+            class="por-que-elegirnos_image"
+            src="img/primaria_3.jpg"
+            alt="Imagen_alumnos_en_clase"
+          />
         </div>
       </section>
-      <section id="propuesta-educativa" class="main__section">
-        <h3 class="main__section_propuesta-educativa_h3">Propuesta educativa</h3>
+      <section id="propuesta-educativa" class="propuesta-educativa">
+        <h3>Propuesta educativa</h3>
         <div class="main__section_propuesta-educativa">
-          <img class="main__section_propuesta-educativa_img" src="img/primaria_4.jpg" alt="Imagen_alumnos_en_clase" />
-          <div class="propuesta-educativa_transp-azul">
+          <div class="propuesta-educativa_container">
+            <img
+              class="propuesta-educativa_image"
+              src="img/primaria_4.jpg"
+              alt="imagen_niño_en_clase"
+            />
+            <p class="propuesta-educativa_p">
+              Aprendizaje personalizado: Nuestra propuesta educativa se basa en
+              brindar un enfoque individualizado, adaptado a las necesidades de
+              cada estudiante, fomentando su desarrollo integral.
+            </p>
           </div>
-          <img class="main__section_propuesta-educativa_img" src="img/primaria_4.jpg" alt="Imagen_alumnos_en_clase" />
-          <div class="propuesta-educativa_transp-azul">
+          <div class="propuesta-educativa_container">
+            <img
+              class="propuesta-educativa_image"
+              src="img/primaria_4.jpg"
+              alt="imagen_niño_en_clase"
+            />
+            <p class="propuesta-educativa_p">
+              Innovación y tecnología: En Untref School, promovemos el uso de
+              herramientas tecnológicas para potenciar el aprendizaje, estimular
+              la creatividad y preparar a los estudiantes para el mundo digital
+            </p>
           </div>
-          <img class="main__section_propuesta-educativa_img" src="img/primaria_4.jpg" alt="Imagen_alumnos_en_clase" />
-          <img class="main__section_propuesta-educativa_img" src="img/primaria_4.jpg" alt="Imagen_alumnos_en_clase" />
-          <div class="main__container_transp">
+          <div class="propuesta-educativa_container">
+            <img
+              class="propuesta-educativa_image"
+              src="img/primaria_4.jpg"
+              alt="imagen_niño_en_clase"
+            />
+            <p class="propuesta-educativa_p">
+              Valores y formación integral: Más que enseñar conocimientos,
+              buscamos formar ciudadanos responsables y solidarios, inculcando
+              valores como el respeto, la empatía y el trabajo en equipo.
+            </p>
+          </div>
+          <div class="propuesta-educativa_container">
+            <img
+              class="propuesta-educativa_image"
+              src="img/primaria_4.jpg"
+              alt="imagen_niño_en_clase"
+            />
+            <p class="propuesta-educativa_p">
+              Experiencias enriquecedoras: Nuestros estudiantes participan en
+              actividades extracurriculares, salidas educativas y proyectos
+              interdisciplinarios que enriquecen su aprendizaje.
+            </p>
           </div>
         </div>
       </section>
-      <section id="ultimas-noticias" class="main__section">
-        Últimas noticias.
-        <article class="section__article"></article>
+      <section id="ultimas-noticias" class="section_noticias">
+        <h3 class="ultimas-noticiass_h3">Ultimas Noticias</h3>
+        <div class="ultimas-noticias_container">
+          <article class="section_noticias_article">
+            <h4>¡Increíble: Aprendizaje Supersónico!</h4>
+            <p class="ultimas-noticias_p">
+              Un grupo de investigadores de renombre ha revelado un asombroso
+              hallazgo que cambiará la forma en que concebimos el aprendizaje.
+              Según un estudio reciente, se ha descubierto que el cerebro humano
+              posee una capacidad de aprendizaje diez veces mayor de lo que se
+              creía anteriormente. Este descubrimiento tiene el potencial de
+              revolucionar la educación, abriendo nuevas vías para maximizar el
+              aprovechamiento del potencial cognitivo de los estudiantes.
+              ¡Prepárense para una era de aprendizaje superacelerado!
+            </p>
+          </article>
+          <article class="section_noticias_article">
+            <h4>¡Revolución Virtual Educativa</h4>
+            <p class="ultimas-noticias_p">
+              La tecnología de realidad virtual ha alcanzado un hito histórico
+              al transformar por completo la forma en que se imparte la
+              educación. Gracias a la integración de dispositivos de vanguardia,
+              los estudiantes ahora pueden sumergirse en mundos virtuales ultra
+              realistas y vivir experiencias educativas completamente
+              inmersivas. Desde explorar civilizaciones antiguas hasta viajar al
+              espacio exterior, esta nueva herramienta educativa promete llevar
+              el aprendizaje a niveles nunca antes imaginados. ¡Prepárate para
+              desafiar los límites de la imaginación y el conocimiento con la
+              realidad virtual educativa!
+            </p>
+          </article>
+        </div>
       </section>
     </main>
     <aside class="aside">
       relleno con barras laterales para páginas de 720
     </aside>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_redes">
+          <h5>Redes Sociales</h5>
+          <ol>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">
+                Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank"> Facebook</a>
+            </li>
+            <li><a href="https://twitter.com/" target="_blank"> Twitter</a></li>
+          </ol>
+        </div>
+        <div class="footer_location">
+          <h5>Instituto</h5>
+          <a
+            class="footer_location_link"
+            href="https://www.google.com/maps/search/universidad+nacional+3+de+febrero/@-34.6042525,-58.5654857,16.78z?entry=ttu"
+          >
+            <img
+              class="footer_mapa"
+              src="img/mapa.jpg"
+              alt="Mapa institución"
+              target="_blank"
+          /></a>
+        </div>
+        <div class="footer_contacto">
+          <h5>Contacto</h5>
+          <ol>
+            <li>info@UntrefSchool</li>
+            <li>22354754</li>
+            <li><a href="https://wa.me/22354754">WhatsApp</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <a class="footer_location_link" href="contacto.html" target="_blank"
+        ><img class="whatsapp" src="img/whatsapp.jpg" alt="Whatsapp"
+      /></a>
+    </footer>
   </body>
 </html>
