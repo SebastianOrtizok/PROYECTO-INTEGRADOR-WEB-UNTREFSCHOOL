@@ -9,94 +9,144 @@
   --color-fondo: #eff5f5;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
 }
 
 /* MENU*/
 
-.header__nav {
-  background-color: var(--color-terciario);
+.nav__responsive-ul {
+  display: none;
 }
 
-header nav ul {
-  display: block;
-  margin: 0;
-  padding: 0.5rem;
-  list-style: none;
-  text-align: center;
+nav {
+  background-color: var(--color-primario);
+  box-shadow: 0 3px 5px 1px rgb(114, 114, 114);
 }
 
-header nav li {
-  margin: 0.5rem 0;
-  box-shadow: 2px 2px 3px var(--color-texto);
-  border-radius: 5px;
-}
-
-header nav ul li a {
-  display: block;
-  font-family: "Poppins", Courier, monospace;
-  padding: 0.2rem 0;
-  width: 100%;
-  text-decoration: none;
-  color: var(--color-fondo);
-}
-
-header nav li:hover {
-  margin: 0.5rem;
-  box-shadow: 0.3px 0.3px 1px var(--color-terciario);
-  border-radius: 10px;
-}
-
-header nav ul li a:hover {
-  color: var(--color-primario);
-}
-
-/*fin menu*/
-
-/* Main*/
-.container {
-  position: relative;
+.nav__li {
   display: inline-block;
+  padding: 12px;
+  color: var(--color-terciario);
 }
 
-.overlay {
+.nav__li:hover > a {
+  color: #005777;
+}
+.nav__li:hover {
+  color: #005777;
+}
+
+.nav__li a {
+  color: var(--color-terciario);
+  text-decoration: none;
+  font-size: 15px;
+}
+.nav__li i {
+  box-sizing: border-box;
+  text-align: left;
+  margin-right: 5px;
+}
+
+.nav_responsive-button-container {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: #00425a72; /* Ajusta el color y la opacidad según tus preferencias */
+  font-size: 20px;
+  background-color: var(--color-primario);
+  margin-top: -64px;
+  z-index: 100;
 }
 
-.main__img {
-  width: 100vw;
-  filter: grayscale(100%);
+.nav_responsive-button {
+  padding: 6px 2px;
+  margin-top: 3px;
+  text-align: center;
+  width: 35px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .nav__ul {
+    display: none;
+  }
+
+
+  .nav__responsive-ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 37px;
+    padding-top: 27px;
+    height: 37px;
+    list-style: none;
+  }
+  .nav__li-container {
+    position: relative;
+    top: -1000px;
+    height: calc(100vh -64px);
+    background: rgba(255, 149, 63, 0.8);
+    transition: all 1s;
+    z-index: 1;
+    width: 75%;
+    padding-top: 27px;
+    border-radius: 10px;
+  }
+
+  .nav__responsive-li {
+    width: 100%;
+    padding: 9px 10px;
+  }
+  .nav__responsive-li i {
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--color-terciario);
+  }
+
+  .nav__responsive-li a {
+    color: var(--color-terciario);
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .nav__responsive-ul:hover > .nav__li-container {
+    top: -27px;
+  }
+}
+
+/*Main*/
+
+.main_container {
+  display: flex;
+  height: 50vh;
+  background: linear-gradient(rgba(0, 66, 90, 0.75), rgba(0, 66, 90, 0.75)),
+    url(../img/institucion.jpg) no-repeat center center fixed;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .main__title {
-  position: absolute;
-  top: 30%; /* Alineación vertical */
-  left: 50%; /* Alineación horizontal */
-  transform: translate(-50%, -50%); /* Centrar el texto */
   color: var(--color-primario);
   font-family: "Belanosima", Courier, monospace;
   text-align: center;
   text-shadow: 3px 3px 5px var(--color-texto);
-  white-space: nowrap;
+  font-size: 20px;
 }
 main h2 {
-  position: absolute;
-  top: 35%; /* Alineación vertical */
-  left: 50%; /* Alineación horizontal */
-  transform: translate(-50%, -50%);
   color: var(--color-primario);
   font-family: "Belanosima", Courier, monospace;
   font-size: 1rem;
   text-align: center;
   text-shadow: 1px 1px 5px var(--color-texto);
-  white-space: nowrap;
 }
 
 /* Seccion quienes somos*/
@@ -141,7 +191,7 @@ main section p {
   display: inline;
   font-family: "Poppins New", Courier, monospace;
   font-size: 1rem;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Sección Por que elegirnos*/
@@ -315,8 +365,8 @@ footer div div a {
 
 footer ol {
   margin: 0;
-text-align: left;
-padding-left: 0;
+  text-align: left;
+  padding-left: 0;
 }
 
 footer li {
@@ -324,7 +374,7 @@ footer li {
   list-style-type: none;
 }
 
-.footer_location{
+.footer_location {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,9 +384,8 @@ footer li {
   display: inline-block;
 }
 
-
 .footer_mapa {
-  width: 50%;
+  width: 100%;
   align-items: center;
   border-radius: 10px;
 }
@@ -345,51 +394,60 @@ footer li {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 10%;
+  width: 5%;
   animation: rotate 5s infinite;
   animation-delay: 55s;
 }
+footer div div ol li a i{
+  font-size: 2rem;
+  color:var(--color-terciario)
+}
+
+
 
 /* Página formulario*/
 #formulario {
-margin: 1rem auto;
-width: 50%;
+  margin: 1rem auto;
+  width: 50%;
   color: var(--color-primario);
   font-family: "Belanosima", Courier, monospace;
   text-align: center;
   text-shadow: 3px 3px 5px var(--color-texto);
 }
 
-#body{
+#body {
   background-image: url(../img/bacground_image_form.jpg);
   background-size: cover;
 }
 
-.button, button, input[type='button'], input[type='reset'], input[type='submit']{
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   background-color: #1f8a70;
   border: 0.1rem solid #1f8a70;
 }
-textarea{
-  color:#1f8a70;
+textarea {
+  color: #1f8a70;
 }
 
-textarea:focus{
-  color:#eff5f5;
+textarea:focus {
+  color: #eff5f5;
 }
-textarea::placeholder{
-  color:#1f8a70;
-}
-
-
-input{
-  color:#1f8a6f;
-}
-input::placeholder{
-  color:#1f8a70;
+textarea::placeholder {
+  color: #1f8a70;
 }
 
-input:focus{
-color: #eff5f5;
+input {
+  color: #1f8a6f;
+}
+input::placeholder {
+  color: #1f8a70;
+}
+
+input:focus {
+  color: #eff5f5;
 }
 
 @keyframes rotate {
@@ -410,15 +468,14 @@ color: #eff5f5;
   }
 }
 
-/*media query*/
-
+/* media query*/
 @media (max-width: 1800px) {
   .main__title {
-    font-size: 10rem;
+    font-size: 8rem;
     top: 35%;
   }
   main h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     top: 65%;
   }
   header nav ul {
@@ -508,4 +565,4 @@ color: #eff5f5;
     width: 100%;
     height: 100%;
   }
-}
+} 
