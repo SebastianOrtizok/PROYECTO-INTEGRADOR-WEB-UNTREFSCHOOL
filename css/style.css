@@ -50,7 +50,7 @@ nav {
 }
 
 .nav_responsive-button-container {
-  position: absolute;
+  position: fixed;
   width: 100%;
   font-size: 20px;
   background-color: var(--color-primario);
@@ -87,7 +87,7 @@ nav {
     list-style: none;
   }
   .nav__li-container {
-    position: relative;
+    position: fixed;
     top: -1000px;
     height: calc(100vh -64px);
     background: rgba(255, 149, 63, 0.8);
@@ -175,14 +175,18 @@ main section h3 {
   margin: 1rem;
   width: 40%;
   height: 40%;
-  filter: grayscale();
+  filter: grayscale(100%);
   border-radius: 10px;
   box-shadow: 3px 3px 5px var(--color-texto);
 }
 
 main section div img:hover {
   transition: 1s;
-  filter: none;
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    transition: 0.5s;
+    box-shadow: 7px 7px 7px rgb(104, 103, 103);
+    cursor: pointer;
 }
 
 main section p {
@@ -216,94 +220,81 @@ main section p {
   box-shadow: 3px 3px 5px var(--color-texto);
 }
 
+
 /* Sección Propuesta Educativa */
-.main__section_propuesta-educativa {
-  display: flex;
-  align-items: center;
+.main__section_propuesta-educativa{
+  background-color: #fc710028;
 }
 
-.propuesta-educativa_container {
-  display: flex;
-  align-items: center;
+h5{
+  font-family: 'Poppins', Courier, monospace;
+  font-size: 1rem;
+  padding:0.5rem;
+}
+
+.propuesta-educativa-container {
+  display: grid;
+  width: 90%;
+  height: fit-content;
+  gap: 1.5rem;
+  margin: 2rem  auto 0.5rem auto;
+  padding-bottom: 5rem;
+  grid-template-rows: repeat(2, 45%);
+  grid-template-columns: repeat(2, 45%);
+
+  /* padding: 4rem 0.5rem 0.5rem 0.5rem; */
   justify-content: center;
-  flex-direction: column;
-  width: 20%;
-  margin: 1rem;
-}
-
-.propuesta-educativa_image {
-  margin: 1rem;
-  width: 95%;
-  height: 40%;
-  filter: grayscale();
+  align-items: start;
+  align-content: space-between;
   border-radius: 10px;
-  box-shadow: 3px 3px 5px var(--color-texto);
-}
-.propuesta-educativa_p {
-  text-align: center;
 }
 
-.main__section_propuesta-educativa {
+.propuesta-educativa-container .item {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-#propuesta-educativa {
-  background-color: #fc71001b;
-  padding: 0.2rem 0.1rem 0.1rem 0.1rem;
-  margin: 0.5rem;
+.propuesta-educativa-container .item p {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0;
+  pointer-events: none; 
+  scale: 1%;/* Deshabilitar la interacción del mouse */
+
+}
+
+.propuesta-educativa-container .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(122, 122, 122);
 }
 
-.section__propuesta-educativa_container {
-  flex-direction: column;
-  background-color: #fc710019;
-  margin: 9px;
+.propuesta-educativa-container .item:hover img {
+  transition: opacity 2s;
+  opacity: 0.3;
 }
 
-.section__propuesta-educativa_container p {
-  display: inline;
-  text-align: center;
+.propuesta-educativa-container .item:hover p {
+  opacity: 1;
+  scale: 100%;
+  transition: opacity 2s;
+  transition: scale 2s;
+  color: var(--color-primario);
+  font-family: "Belanosima", Courier, monospace;
+  font-size: 3rem;
 }
 
-.imagen_propuesta-educativa {
-  animation: color-change 5s infinite;
-}
 
-section div div p {
-  text-align: center;
-}
-
-.propuesta-educativa_image:hover {
-  animation: slide-up 2s ease-in-out;
-}
-.propuesta-educativa_image {
-  animation: color-change 5s infinite;
-}
-
-@keyframes color-change {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(120deg);
-  }
-  100% {
-    filter: hue-rotate(0deg);
-  }
-}
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10%);
-  }
-}
 
 /*Ultimas noticias*/
 
@@ -315,10 +306,16 @@ section div div p {
 }
 .ultimas-noticias_container {
   display: flex;
-  margin: 1rem;
+  margin: 2rem;
+}
+
+h4{
+  font-family: "Belanosima", Courier, monospace;
+  margin-bottom: 0.5rem;
 }
 
 .ultimas-noticias_p {
+  font-family: "Belanosima", Courier, monospace;
   text-align: justify;
 }
 
@@ -339,6 +336,7 @@ footer {
 .footer_container {
   display: flex;
   justify-content: space-between;
+  margin: 0 2rem;
 }
 
 footer h5 {
@@ -351,9 +349,7 @@ footer h5 {
 .footer_redes,
 .footer_location,
 .footer_contacto {
-  width: 30%;
   display: flex;
-  padding: 0 0.5rem;
   flex-direction: column;
   align-items: center;
 }
@@ -385,21 +381,32 @@ footer li {
 }
 
 .footer_mapa {
-  width: 100%;
+  width: 50%;
   align-items: center;
   border-radius: 10px;
 }
 
 .whatsapp {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 5%;
+  bottom: 3px;
+  right: 3px;
+  width: 10%;
   animation: rotate 5s infinite;
   animation-delay: 55s;
 }
+
+.sobre {
+  position: fixed;
+  bottom: 3px;
+  left: 3px;
+  width: 10%;
+  animation: rotate 5s infinite;
+  animation-delay: 55s;
+}
+
 footer div div ol li a i{
-  font-size: 2rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
   color:var(--color-terciario)
 }
 
@@ -501,6 +508,11 @@ input:focus {
     font-size: 2.9rem;
     top: 50%;
   }
+  .propuesta-educativa-container {
+    align-items: end;
+    grid-template-rows: repeat(1, 25%);
+    grid-template-columns: repeat(1, 90%);
+   }
   main h2 {
     font-size: 1.2rem;
     top: 60%;
