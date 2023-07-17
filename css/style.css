@@ -14,7 +14,7 @@
   padding: 0;
 }
 
-body{
+body {
   background-color: var(--color-terciario);
 }
 /* MENU*/
@@ -71,56 +71,12 @@ nav {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media only screen and (max-width: 800px) {
-  .nav__ul {
-    display: none;
-  }
-
-  .nav__responsive-ul {
-    display: block;
-    position: absolute;
-    width: 100%;
-    margin-top: 37px;
-    padding-top: 27px;
-    height: 37px;
-    list-style: none;
-  }
-  .nav__li-container {
-    position: fixed;
-    top: -1000px;
-    height: calc(100vh -64px);
-    background: rgba(255, 149, 63, 0.8);
-    transition: all 1s;
-    z-index: 1;
-    width: 75%;
-    padding-top: 27px;
-    border-radius: 10px;
-  }
-
-  .nav__responsive-li {
-    width: 100%;
-    padding: 9px 10px;
-  }
-  .nav__responsive-li i {
-    box-sizing: border-box;
-    margin-right: 10px;
-    font-size: 20px;
-    text-align: center;
-    color: var(--color-terciario);
-  }
-
-  .nav__responsive-li a {
-    color: var(--color-terciario);
-    text-decoration: none;
-    font-size: 15px;
-  }
-
-  .nav__responsive-ul:hover > .nav__li-container {
-    top: -27px;
-  }
-}
-
 /*Main*/
+
+.section_container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
 
 .main_container {
   display: flex;
@@ -185,6 +141,20 @@ main h2 {
   }
 }
 
+/* Aside*/
+.aside {
+  background-color: var(--color-fondo);
+  background-size: auto;
+  grid-row: span 4;
+  padding: 10px;
+  width: 95%;
+  margin: auto;
+}
+
+.aside {
+  width: 80%;
+}
+
 /* Seccion quienes somos*/
 #quienes-somos {
   background: var(--color-secundario);
@@ -238,7 +208,7 @@ main section p {
   padding: 0.2rem 0.1rem 0.1rem 0.1rem;
 }
 
-.main__por-que-elegirnos_p{
+.main__por-que-elegirnos_p {
   color: var(--color-fondo);
 }
 
@@ -262,10 +232,9 @@ main section p {
   background-color: var(--color-primario);
   padding: 0.2rem 0.1rem 0.1rem 0.1rem;
 }
-.propuesta-educativa_h3{
+.propuesta-educativa_h3 {
   color: #005777;
 }
-
 
 h5 {
   font-family: "Poppins", Courier, monospace;
@@ -327,7 +296,7 @@ h5 {
   scale: 100%;
   transition: opacity 2s;
   transition: scale 2s;
-  color: var(--color-primario);
+  color: var(--color-terciario);
   font-family: "Belanosima", Courier, monospace;
   font-size: 3rem;
 }
@@ -432,6 +401,22 @@ footer li {
   animation-delay: 55s;
 }
 
+.inicio {
+  width: 10%;
+  position: fixed;
+  bottom: 50vh;
+  right: 3px;
+  opacity: 0.5;
+  scale: 50%;
+  filter: grayscale(100%);
+}
+
+.inicio:hover {
+  right: 0;
+  transition: 1s;
+  opacity: 1;
+}
+
 .sobre {
   position: fixed;
   bottom: 3px;
@@ -454,7 +439,7 @@ footer div div ol li a i {
   color: var(--color-primario);
   font-family: "Belanosima", Courier, monospace;
   text-align: center;
-  text-shadow: 3px 3px 5px var(--color-texto);
+  text-shadow: 1px 1px 3px var(--color-texto);
 }
 
 #body {
@@ -462,8 +447,7 @@ footer div div ol li a i {
   background-size: cover;
 }
 
-.button,
-button,
+.button,button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -490,6 +474,11 @@ input::placeholder {
 
 input:focus {
   color: #eff5f5;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
 }
 
 @keyframes rotate {
@@ -539,10 +528,58 @@ input:focus {
 }
 
 @media (max-width: 768px) {
+  .nav__ul {
+    display: none;
+  }
+
+  .nav__responsive-ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 37px;
+    padding-top: 27px;
+    height: 37px;
+    list-style: none;
+  }
+  .nav__li-container {
+    position: fixed;
+    top: -1000px;
+    height: calc(100vh -64px);
+    background: rgba(255, 149, 63, 0.8);
+    transition: all 1s;
+    z-index: 1;
+    width: 75%;
+    padding-top: 27px;
+    border-radius: 10px;
+  }
+
+  .nav__responsive-li {
+    width: 100%;
+    padding: 9px 10px;
+  }
+  .nav__responsive-li i {
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--color-terciario);
+  }
+
+  .nav__responsive-li a {
+    color: var(--color-terciario);
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .nav__responsive-ul:hover > .nav__li-container {
+    top: -27px;
+  }
+
   .main__title {
     font-size: 2.9rem;
     top: 50%;
   }
+
   .propuesta-educativa-container {
     align-items: end;
     grid-template-rows: repeat(1, 25%);
@@ -579,6 +616,14 @@ input:focus {
   .propuesta-educativa_container {
     width: 100%;
   }
+  .section_container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .aside {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
@@ -586,6 +631,22 @@ input:focus {
     font-size: 1.5rem;
     top: 40%;
   }
+  .section_container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .propuesta-educativa-container .item p {
+    top: 13%;
+  }
+  .propuesta-educativa-container .item:hover p {
+    font-size: 2rem;
+  }
+
   main h2 {
     top: 45%;
     font-size: 1rem;
