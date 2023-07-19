@@ -334,11 +334,6 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
-.ultimas-noticias_p {
-  font-family: "Belanosima", Courier, monospace;
-  text-align: justify;
-}
-
 .section_noticias_article {
   margin: 0.5rem;
   padding: 1rem;
@@ -419,34 +414,49 @@ animation: rotate 1s
 .menuflot{
   position: fixed;
   bottom: 50vh;
-  background-color: rgba(252, 113, 0, 0.42);
+  background-color: rgb(255, 255, 255);
   bottom: 180px;
-  right: -20px;
-  width: 5%;
+  left: 95vw;
+  width: 10%;
   height: fit-content;
   padding: 1rem;
   border-radius: 10px;
+  opacity: 0.4;
 }
 .menuflot:hover {
   transition: 1s;
-  right: 3px;
+  left: 90vw;
+  opacity: 1;
 }
 
-
-
-.menuflot .inicio{
-  width: 60%;
-}
-
-.menuflot .whatsapp {
-  width: 80%;
-  animation: rotate 5s infinite;
-  animation-delay: 55s;
-}
 .menuflot .sobre {
   width: 80%;
+}
+
+.whatsapp {
+  position: fixed;
+  right: 0;
+  bottom: 40px;
+  width: 40px;
   animation: rotate 5s infinite;
   animation-delay: 55s;
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#flecha{
+  position: fixed;
+  left: 0;
+  bottom: 50vh;
+  width: 40px;
+  animation: move 5s infinite;
+  animation-delay: 55s;
+}
+@keyframes move {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
 }
 
 footer div div ol li a i {
