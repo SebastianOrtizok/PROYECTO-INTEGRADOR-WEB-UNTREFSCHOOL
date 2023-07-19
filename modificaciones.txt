@@ -1,1 +1,19 @@
-******* Agregar  formsubmit.co*******
+agregar el link como aparece en compartir ifame de googlemaps
+
+mi propio estilo tiene que ir despues del estilo d boostrap
+
+tenemos 2 contenedores 
+el comun que agrega 2 márgenes
+el container fluid que se ajusta 
+
+popper.js.org
+https://chat.whatsapp.com/D2xVV7q76OKJaHrdBhx55w
+
+Es de locos en mi canal de YouTube  tenis ahora aparece Elon Musk
+
+desde css
+html{
+ scroll-behyavior: smoth;
+
+para presentar el trbajo 
+https://docs.google.com/forms/d/1snlLm49-gzT6Pu8mg1VxeDq5WdgbBCdiI6LgSmH83no/edit
