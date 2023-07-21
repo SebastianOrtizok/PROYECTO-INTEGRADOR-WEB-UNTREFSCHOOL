@@ -228,6 +228,8 @@ main section p {
   padding: 0.2rem 0.1rem 0.1rem 0.1rem;
 }
 
+
+
 .main__por-que-elegirnos_p {
   color: var(--color-fondo);
 }
@@ -254,12 +256,21 @@ main section p {
 }
 .propuesta-educativa_h3 {
   color: #005777;
+  animation: changeColorh3 15s infinite;
 }
+
+@keyframes changeColorh3 {
+  0% { color: var(--color-terciario); } 
+  50% { color: var(--color-secundario)} 
+  100% { color: var(--color-terciario); } 
+}
+
+
 
 h5 {
   font-family: "Poppins", Courier, monospace;
   font-size: 1rem;
-  padding: 0.5rem;
+margin-top: 0.5rem;
 }
 
 .propuesta-educativa-container {
@@ -302,7 +313,7 @@ h5 {
 .propuesta-educativa-container figcaption {
   position: absolute;
   top: 50px;
-align-self: center;
+  align-self: center;
   font-size: 1rem;
   color: white;
   opacity: 0;
@@ -349,9 +360,9 @@ footer {
 }
 
 @keyframes changeColor {
-  0% { background-color: var(--color-primario); } /* Color inicial (rojo) */
-  50% { background-color: #ff9b49} /* Color intermedio (verde) */
-  100% { background-color: var(--color-primario); } /* Color final (azul) */
+  0% { background-color: var(--color-primario); } 
+  50% { background-color: #ff9b49} 
+  100% { background-color: var(--color-primario); } 
 }
 
 .footer_container {
@@ -368,9 +379,15 @@ footer h5 {
 .footer_redes,
 .footer_location,
 .footer_contacto {
+  border: solid 3px var(--color-terciario);
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.fa.fa{
+  font-size: 2.5em;
 }
 
 footer div div a {
@@ -402,6 +419,8 @@ animation: rotate 1s
 }
 .footer_location_link {
   display: inline-block;
+  margin: 1rem;
+  box-shadow: 1px 5px 5px #181823;
 }
 
 .footer_mapa {
@@ -707,5 +726,11 @@ textarea:invalid {
   .propuesta-educativa-container .item:hover figcaption {
     font-size: 1.7rem;
   }
+  .footer_container {
+    flex-direction: column;
+  }
+  footer li {
+    display: inline;
+   }
 
 }
